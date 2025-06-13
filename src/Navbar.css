@@ -1,16 +1,21 @@
-*{
-   
-  font-family: "Overpass";
-
+* {
+  font-family: "Overpass", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  background-color:#fff; 
-  padding: 10px 110px;
-  box-shadow: 1px 1px 1px 1px #f8f6f6;
+  background-color: #fff;
+  padding: 15px 60px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
 }
 
 .navbar-left {
@@ -19,68 +24,90 @@
 }
 
 .logo {
-  width: 150px;
-  height: 150px;
-  height: auto;
-  margin-right: 20px;
- 
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  margin-right: 15px;
+  border-radius: 50%;
 }
 
 .slogan {
   display: flex;
   flex-direction: column;
-  color: white;
+  color: #055b39;
 }
 
 .srdt {
   margin: 0;
-  font-size: 50px;
-  font-weight: bold;
-  font-weight: 1000;
+  font-size: 32px;
+  font-weight: 800;
   display: flex;
-  justify-content: center;
   align-items: center;
-  font-family: "OverpassArialsans-serif"
+  padding-left: 75px;
 }
-.s{
-    color:rgb(37, 150, 190);
-}
-.r{
-    color:rgb(174, 51, 7);
 
+.s {
+  color: rgb(37, 150, 190);
 }
-.d{
-    color:rgb(145, 3, 152);
+.r {
+  color: rgb(174, 51, 7);
 }
-.t{
-    color:rgb(20, 213, 33);
+.d {
+  color: rgb(145, 3, 152);
 }
+.t {
+  color: rgb(20, 213, 33);
+}
+
 .tagline {
-  margin: 0;
-  font-size: 0.8rem;
-  letter-spacing: 1px;
-  color:#055b39;
-  display: flex;
-  justify-items: center;
-  align-items: center;
+  font-size: 0.9rem;
+  color: #055b39;
+  margin-top: 4px;
 }
 
 .navbar-links {
   list-style: none;
   display: flex;
-  gap: 30px;
-  justify-content: center;
-  align-items: center;
+  gap: 25px;
+  padding-right: 25px;
 }
 
 .navbar-links li a {
   text-decoration: none;
   color: #0e0c0c;
-  transition: color 0.3s;
   font-size: 16px;
   font-weight: 500;
+  transition: color 0.3s ease;
 }
 
 .navbar-links li a:hover {
-  color: #055b39; 
+  color: #055b39;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 20px;
+  }
+
+  .navbar-links {
+    flex-direction: column;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .navbar-links li {
+    margin: 5px 0;
+  }
+
+  .logo {
+    width: 60px;
+    height: 60px;
+  }
+
+  .srdt {
+    font-size: 24px;
+  }
 }
