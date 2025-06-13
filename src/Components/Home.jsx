@@ -3,8 +3,8 @@ import photo1 from "../assets/Home/photo1.jpeg";
 import photo2 from "../assets/Home/photo2.jpeg";
 import photo3 from "../assets/Home/photo3.jpeg";
 import photo4 from "../assets/Home/photo4.jpeg";
-import photo4 from "../assets/Home/photo5.jpeg";
-import photo4 from "../assets/Home/photo6.jpeg";
+import photo5 from "../assets/Home/photo5.jpeg";
+import photo6 from "../assets/Home/photo6.jpeg";
 import "./Home.css";
 
 const images = [photo1, photo2, photo3, photo4];
