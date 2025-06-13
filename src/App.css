@@ -1,14 +1,18 @@
+/* Ensure the page takes full height */
 html, body, #root {
   height: 100%;
   margin: 0;
+  padding: 0;
 }
 
+/* Main container uses flexbox to manage layout */
 .app-container {
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
+  min-height: 100vh;
 }
 
+/* Content area should expand to fill available space */
 .content-wrap {
   flex: 1;
 }

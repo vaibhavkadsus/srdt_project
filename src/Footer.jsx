@@ -26,6 +26,7 @@ const Footer = () => {
             <h5 className="text-uppercase mb-4 font-weight-bold text-warning">Follow Us</h5>
             <div className="d-flex justify-content-center justify-content-md-start">
               <a href="#" className="text-white me-4"><FaFacebookF /></a>
+
               <a href="#" className="text-white me-4"><FaInstagram /></a>
               <a href="#" className="text-white"><FaLinkedinIn /></a>
             </div>
