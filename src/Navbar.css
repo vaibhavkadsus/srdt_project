@@ -1,0 +1,84 @@
+*{
+   
+  font-family: "Overpass";
+
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color:#fff; 
+  padding: 40px 110px;
+  box-shadow: 1px 1px 1px 1px #f8f6f6;
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 100px;
+  height: auto;
+  margin-right: 20px;
+}
+
+.slogan {
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+
+.srdt {
+  margin: 0;
+  font-size: 50px;
+  font-weight: bold;
+  font-weight: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "OverpassArialsans-serif"
+}
+.s{
+    color:rgb(37, 150, 190);
+}
+.r{
+    color:rgb(174, 51, 7);
+
+}
+.d{
+    color:rgb(145, 3, 152);
+}
+.t{
+    color:rgb(20, 213, 33);
+}
+.tagline {
+  margin: 0;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  color:#055b39;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+}
+
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar-links li a {
+  text-decoration: none;
+  color: #0e0c0c;
+  transition: color 0.3s;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.navbar-links li a:hover {
+  color: #055b39; 
+}
