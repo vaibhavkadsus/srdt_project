@@ -1,15 +1,12 @@
 import React from "react";
 import "./Navbar.css"; // ✅ Correct spelling
+import logo from './assets/Logo.jpeg';
 
 const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="navbar-left">
-        <img
-          src="https://sairuraldevelopmenttrust.com/images/logo/Untitled_design__6__1_-removebg-preview.png"
-          alt="Logo"
-          className="logo"
-        />
+        <img src={logo} alt="Logo" className="logo" />
         <div className="slogan">
           <h1 className="srdt">
             <span className="s">S</span>
