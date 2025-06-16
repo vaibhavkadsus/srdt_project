@@ -46,7 +46,7 @@ const Footer = () => {
       {/* Bottom Bar */}
       <div className="footer-bottom">
         <p>© {new Date().getFullYear()} SRDT Foundation | All rights reserved.</p>
-        <p>Developed by <span className="highlight">Vaibhav Kadus</span></p>
+        <p>Developed by <span className="highlight">Alphaseam pvt.ltd</span></p>
       </div>
     </footer>
   );

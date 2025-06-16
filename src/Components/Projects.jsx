@@ -1,80 +1,74 @@
 import React from "react";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import "./Projects.css";
 
-const completedProjects = [
-  {
-    title: "Baseline Survey – A.M Fresh (U.K)",
-    details:
-      "Survey conducted in Nashik, Sangli, Satara & Osmanabad for grape growers, farm & pack‑house workers.",
-    implementedBy: "IRFT & Sai Rural Development Trust",
-  },
-  {
-    title: "Baseline Survey – Syngenta Bioscience Pvt. Ltd",
-    details:
-      "Survey conducted in Goa for community workers, SHGs & Gram Panchayats.",
-    implementedBy: "IRFT & Sai Rural Development Trust",
-  },
-  {
-    title: "Health & Safety Farmer Awareness Programme",
-    details:
-      "Training program for 5,000 farmers and 500 spray‑men in Khargone (MP) including a 50‑day awareness van campaign and PPE usage demo.",
-    implementedBy: "Syngenta India Ltd",
-  },
-  {
-    title: "Regenerative Agriculture Practices",
-    details:
-      "Training for ~1,000 growers in Maharashtra, Gujarat & Karnataka on regenerative farming practices like minimal soil disturbance, crop diversity, and livestock integration.",
-    implementedBy: "Syngenta India Ltd",
-  },
-  {
-    title: "Health Camp & PPE Kit Distribution",
-    details:
-      "Organized a health camp and distributed PPE kits to 400 farmers in Devulgaon Raja, Maharashtra.",
-    implementedBy: "East West Seeds India Pvt. Ltd",
-  },
-  {
-    title: "SAVE 3.0 – Soil Health & Mulch Recycling",
-    details:
-      "Soil testing of 400 growers in Devulgaon Raja, Lonar, Washim & Nanded with training on soil health awareness and recommendations.",
-    implementedBy: "Syngenta India Ltd",
-  },
-];
+import photo1 from "../assets/Project 1/photo1.JPG";
+import photo2 from "../assets/Project 1/photo2.JPG";
+import photo3 from "../assets/Project 1/photo3.JPG";
+import photo4 from "../assets/Project 1/photo4.JPG";
+import photo11 from "../assets/project 2/photo11.JPG";
+import photo12 from "../assets/project 2/photo12.JPG";
+import photo13 from "../assets/project 2/photo13.JPG";
+import photo14 from "../assets/project 2/photo14.JPG";
 
-const ongoingProjects = [
+const projects = [
   {
-    title: "SAVE 3.0 – Soil Health & Mulch Recycling",
-    details:
-      "Soil testing of 400 growers in Devulgaon Raja, Lonar, Washim & Nanded with training on soil health awareness and recommendations.",
-    implementedBy: "Syngenta India Ltd",
+    title: "Baseline Survey",
+    founder: "A.M Fresh (U.K)",
+    implementing: "IRFT and SRDT",
+    period: "2 months (2022)",
+    description:
+      "A survey was conducted in Nashik, Sangli, Satara and Osmanabad Districts of Maharashtra to have a first-hand account of development expectations from the grape growers, farm workers, and packhouse workers.",
+    images: [photo1, photo2, photo3, photo4],
+  },
+  {
+    title: "Baseline Survey",
+    founder: "Syngenta Bioscience Pvt. Ltd.",
+    implementing: "IRFT and SRDT",
+    period: "1 month (2022)",
+    description:
+      "A survey was conducted in Goa to understand community development expectations from community workers, SHGs, gram panchayat, grape growers, farm workers, and packhouse workers.",
+    images: [photo11, photo12, photo13, photo14],
   },
 ];
 
 const Projects = () => {
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 800,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    autoplay: true,
+    autoplaySpeed: 3000,
+  };
+
   return (
-    <div className="projects-page">
-      <h1 className="page-title">Our Projects</h1>
-
-      <section>
-        <h2>Completed Projects</h2>
-        {completedProjects.map((project, index) => (
-          <div className="project-card" key={index}>
-            <h3>{project.title}</h3>
-            <p>{project.details}</p>
-            <p className="implemented-by">Implemented by: <strong>{project.implementedBy}</strong></p>
+    <div className="completed-projects">
+      <h2 className="heading">Completed Projects</h2>
+      <div className="project-grid">
+        {projects.map((project, index) => (
+          <div className="project-box" key={index}>
+            <Slider {...settings}>
+              {project.images.map((img, i) => (
+                <div key={i}>
+                  <img src={img} alt={`Slide ${i + 1}`} className="project-image" />
+                </div>
+              ))}
+            </Slider>
+            <div className="project-info">
+              <h3 className="project-title">{project.title}</h3>
+              <p><strong>Funder Name:</strong> {project.founder}</p>
+              <p><strong>Implementing Agencies:</strong> {project.implementing}</p>
+              <p><strong>Period of Intervention:</strong> {project.period}</p>
+              <p className="project-description">{project.description}</p>
+            </div>
           </div>
         ))}
-      </section>
-
-      <section>
-        <h2>Ongoing Projects</h2>
-        {ongoingProjects.map((project, index) => (
-          <div className="project-card" key={index}>
-            <h3>{project.title}</h3>
-            <p>{project.details}</p>
-            <p className="implemented-by">Implemented by: <strong>{project.implementedBy}</strong></p>
-          </div>
-        ))}
-      </section>
+      </div>
     </div>
   );
 };
