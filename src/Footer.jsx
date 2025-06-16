@@ -1,48 +1,62 @@
 import React from "react";
-import 'bootstrap/dist/css/bootstrap.min.css';
-import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaLinkedinIn,
+  FaEnvelope,
+  FaPhoneAlt,
+  FaMapMarkerAlt,
+} from "react-icons/fa";
+import "./Footer.css";
 
 const Footer = () => {
   return (
-    <footer className="bg-dark text-white pt-5 pb-4">
-      <div className="container text-center text-md-left">
-        <div className="row text-center text-md-left">
-          <div className="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
-            <h5 className="text-uppercase mb-4 font-weight-bold text-warning">SRDT Foundation</h5>
-            <p>
-              A Step Towards Social Change — empowering lives through sustainable development and education.
-            </p>
-          </div>
-
-          <div className="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
-            <h5 className="text-uppercase mb-4 font-weight-bold text-warning">Contact</h5>
-            <p><i className="fas fa-home me-3"></i>Registered office: At: Masnerwadi, Tq: Gangakhed, Dist: Parbhani-431514.</p>
-            <p><i className="fas fa-envelope me-3"></i> sairuraldevelopmenttrust@gmail.com</p>
-            <p><i className="fas fa-phone me-3"></i> +91 9920241110</p>
-          </div>
-
-          <div className="col-md-3 col-lg-4 col-xl-3 mx-auto mt-3">
-            <h5 className="text-uppercase mb-4 font-weight-bold text-warning">Follow Us</h5>
-            <div className="d-flex justify-content-center justify-content-md-start">
-              <a href="#" className="text-white me-4"><FaFacebookF /></a>
-
-              <a href="#" className="text-white me-4"><FaInstagram /></a>
-              <a href="#" className="text-white"><FaLinkedinIn /></a>
-            </div>
-          </div>
+    <footer className="footer">
+      <div className="footer-container">
+        {/* About */}
+        <div className="footer-section about">
+          <h3>SRDT Foundation</h3>
+          <p>
+            A Step Towards Social Change — Empowering lives through sustainable development, education, and innovation.
+          </p>
         </div>
 
-        <hr className="mb-4" />
+        {/* Quick Links */}
+        <div className="footer-section links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/projects">Projects</a></li>
+            <li><a href="/donate">Donate</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </div>
 
-        <div className="row align-items-center">
-          <div className="col-md-7 col-lg-8">
-            <p>© {new Date().getFullYear()} <strong className="text-warning">SRDT Foundation</strong> | All rights reserved.</p>
-          </div>
-          <div className="col-md-5 col-lg-4">
-            <p className="text-end">Developed by <strong></strong></p>
+        {/* Contact */}
+        <div className="footer-section contact">
+          <h4>Contact</h4>
+          <p><FaMapMarkerAlt /> Masnerwadi, Gangakhed, Parbhani-431514</p>
+          <p><FaEnvelope /> sairuraldevelopmenttrust@gmail.com</p>
+          <p><FaPhoneAlt /> +91 9920241110</p>
+        </div>
+
+        {/* Social Media */}
+        <div className="footer-section social">
+          <h4>Follow Us</h4>
+          <div className="social-icons">
+            <a href="#"><FaFacebookF /></a>
+            <a href="#"><FaInstagram /></a>
+            <a href="#"><FaLinkedinIn /></a>
           </div>
         </div>
+      </div>
+
+      {/* Bottom Bar */}
+      <div className="footer-bottom">
+        <p>© {new Date().getFullYear()} SRDT Foundation | All rights reserved.</p>
+        <p>Developed by <span className="highlight">Vaibhav Kadus</span></p>
       </div>
     </footer>
   );

@@ -1,11 +1,10 @@
-import React from 'react';
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap.bundle.min.js';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import './App.css';
 
 import Navbar from './Navbar';
 import Footer from './Footer';
-import './App.css';
 
 import Home from './Components/Home';
 import About from './Components/About';
@@ -19,7 +18,7 @@ function App() {
   return (
     <Router>
       <div className="app-container">
-        <Navbar />
+       <Navbar />
         <div className="content-wrap">
           <Routes>
             <Route path="/" element={<Home />} />

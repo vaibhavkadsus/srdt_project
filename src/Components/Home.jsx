@@ -50,7 +50,6 @@ const Home = () => {
 
   return (
     <div className="home-container">
-   
       <div className="slideshow">
         {images.map((img, index) => (
           <img
@@ -62,7 +61,6 @@ const Home = () => {
         ))}
       </div>
 
-      
       <section className="interest-section">
         <h2>Area of Interest</h2>
         <div className="interest-grid">
