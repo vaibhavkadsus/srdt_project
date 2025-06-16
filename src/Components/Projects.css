@@ -1,0 +1,62 @@
+.projects-page {
+  max-width: 1200px;
+  margin: 100px auto 40px;
+  padding: 0 20px;
+  font-family: "Segoe UI", sans-serif;
+  color: #222;
+}
+
+.page-title {
+  font-size: 2.5rem;
+  color: #2e7d32;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+h2 {
+  color: #1b5e20;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #c8e6c9;
+  padding-bottom: 5px;
+}
+
+.project-card {
+  background-color: #f9f9f9;
+  border-left: 5px solid #4caf50;
+  padding: 20px;
+  margin-bottom: 25px;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+}
+
+.project-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: #2e7d32;
+}
+
+.project-card p {
+  font-size: 1rem;
+  margin: 6px 0;
+  line-height: 1.5;
+}
+
+.implemented-by {
+  font-style: italic;
+  color: #555;
+}
+
+@media (max-width: 768px) {
+  .page-title {
+    font-size: 2rem;
+  }
+
+  .project-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .project-card p {
+    font-size: 0.95rem;
+  }
+}
