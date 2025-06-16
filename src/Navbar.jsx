@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./Navbar.css";
-import logo from "./assets/Logo.png"; // ✅ Corrected path
+import logo from "./assets/Logo.png"; 
 import { Link } from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa";
  
@@ -21,7 +21,7 @@ const Navbar = () => {
             <span className="d">D</span>
             <span className="t">T</span>
           </h1>
-          <p className="tagline">------ A Step Towards Social Change -----</p>
+          <p className="tagline">A Step Towards Social Change</p>
         </div>
       </div>
  
