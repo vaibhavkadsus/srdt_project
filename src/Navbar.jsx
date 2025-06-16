@@ -1,16 +1,15 @@
-// File: src/Navbar.jsx
 import React, { useState } from "react";
 import "./Navbar.css";
 import logo from "./assets/Logo.png"; // ✅ Corrected path
 import { Link } from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa";
-
+ 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
-
+ 
   const toggleMenu = () => setMenuOpen(!menuOpen);
   const closeMenu = () => setMenuOpen(false);
-
+ 
   return (
     <nav className="navbar">
       <div className="navbar-left">
@@ -25,11 +24,11 @@ const Navbar = () => {
           <p className="tagline">------ A Step Towards Social Change -----</p>
         </div>
       </div>
-
+ 
       <div className="menu-icon" onClick={toggleMenu}>
         {menuOpen ? <FaTimes /> : <FaBars />}
       </div>
-
+ 
       <ul className={`navbar-links ${menuOpen ? "active" : ""}`}>
         <li><Link to="/" onClick={closeMenu}>Home</Link></li>
         <li><Link to="/about" onClick={closeMenu}>About</Link></li>
@@ -42,5 +41,5 @@ const Navbar = () => {
     </nav>
   );
 };
-
+ 
 export default Navbar;
