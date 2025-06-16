@@ -81,7 +81,7 @@ const Contact = () => {
         <div className="map-container">
           <iframe
             title="Google Map"
-            src="https://www.google.com/maps?ll=18.932863,76.840078&z=16&t=m&hl=en&gl=IN&mapclient=embed&cid=1708031553330880014"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3773.9665676807153!2d76.84006459999999!3d18.9328739!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcfdd002adcbb01%3A0x17b425a5f1721e0e!2sSai%20Rural%20Development%20Trust!5e0!3m2!1sen!2sin!4v1725702299565!5m2!1sen!2sin"
             width="100%"
             height="300"
             style={{ border: 0 }}
