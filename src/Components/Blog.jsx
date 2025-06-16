@@ -1,9 +1,16 @@
-import React from 'react'
 
-function Blog() {
+import React from 'react';
+import './Blog.css';
+
+const Blog = () => {
   return (
-    <div>Blog</div>
-  )
-}
+    <div className="blog-wrapper">
+      <div className="blog-message">
+        <h1>Blog</h1>
+        <p>🚧 Blog will be coming soon. Stay tuned! 🚀</p>
+      </div>
+    </div>
+  );
+};
 
-export default Blog
+export default Blog;
