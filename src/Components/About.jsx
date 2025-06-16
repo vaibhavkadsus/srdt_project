@@ -1,7 +1,8 @@
-import React from "react";
+import React from 'react'
 
-const About = () => (
-  <div className="bg-gray-50 text-gray-800">
+function About() {
+  return (
+    <div className="bg-gray-50 text-gray-800">
     <div className="container mx-auto p-6 md:p-12 space-y-12">
       <h1 className="text-4xl md:text-5xl font-bold text-green-800 text-center">
         About Sai Rural Development Trust
@@ -72,5 +73,7 @@ const About = () => (
     </div>
   </div>
 );
+  
+}
 
-export default About;
+export default About
