@@ -3,7 +3,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./Projects.css";
-import projectBG from "../assets/Background images/image.png";
+import projectBG from "../assets/Background images/image1.png";
 // Project 1
 import photo1 from "../assets/Project 1/photo1.JPG";
 import photo2 from "../assets/Project 1/photo2.JPG";
@@ -66,6 +66,13 @@ import photo65 from "../assets/Project 8/photo65.jpg";
 import photo67 from "../assets/Project 8/photo67.jpg";
 import photo68 from "../assets/Project 8/photo68.jpg";
 import photo69 from "../assets/Project 8/photo69.jpg";
+
+// Project 9
+import mulchImg1 from '../assets/Project 9/photo71.jpg';
+import mulchImg2 from '../assets/Project 9/photo72.jpg';
+import mulchImg3 from '../assets/Project 9/photo73.jpg';
+import mulchImg4 from '../assets/Project 9/photo74.jpg';
+
 
 const projects = [
   {
@@ -154,6 +161,15 @@ Soil Health: Soil testing of 400 growers, analysis of test reports by soil exper
 Health camp, PPE kit distribution, and safety awareness programme for 700 farmers held on 11th December 2024.`,
     images: [photo61, photo62, photo63, photo64, photo65, photo67, photo68, photo69],
   },
+  {
+  title: "Mulch Collection and Recycling",
+  founder: "East West Seeds India Pvt. Ltd",
+  implementing: "SRDT",
+  period: "6 Months (2024-25)",
+  description:
+    "Location: Devulgaon Raja, Lonar, Maharashtra Collection of 30MT of Mulch Waste from the Project Location and Recycling of the collected Mulch Waste through processing unit.",
+  images: [mulchImg1, mulchImg2, mulchImg3, mulchImg4]
+}
 ];
 
 const ongoingProjects = [
@@ -190,6 +206,7 @@ Mulch Waste Collection and Recycling:
 • Recycling of collected mulch waste through processing unit.`,
   images: [],
 },
+
 
 
   ];
