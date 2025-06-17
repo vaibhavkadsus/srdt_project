@@ -3,7 +3,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 120px 20px 30px; 
+  padding: 45px 20px 30px; 
   background-color: #eaeaea;
   min-height: 75 vh;
   box-sizing: border-box;
@@ -101,7 +101,7 @@
 
 @media (max-width: 600px) {
   .contact-wrapper {
-    padding: 100px 15px 20px;
+    padding: 15px 15px 20px;
   }
 
   .contact-container,
