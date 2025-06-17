@@ -1,5 +1,4 @@
 import React from "react";
-
 import {
   FaFacebookF,
   FaInstagram,
@@ -16,13 +15,11 @@ const Footer = () => {
       <div className="footer-container">
         {/* About */}
         <div className="footer-section about">
-          <h3>SRDT Foundation</h3>
+          <h3>Sai Rural Development Trust (SRDT)</h3>
           <p>
-            A Step Towards Social Change — Empowering lives through sustainable development, education, and innovation.
+            Sai Rural Development Trust (SRDT), established under the Mumbai Public Trust Act, 1950, has been working tirelessly in the sector for several years. We dedicate our efforts to improving the lives of Farmers, Farm Workers, Communities and Women SHG’s through various development projects.
           </p>
         </div>
-
-        
 
         {/* Contact */}
         <div className="footer-section contact">
@@ -36,9 +33,9 @@ const Footer = () => {
         <div className="footer-section social">
           <h4>Follow Us</h4>
           <div className="social-icons">
-            <a href="https://www.facebook.com/profile.php?id=100087210614157&mibextid=LQQJ4d"><FaFacebookF /></a>
-            <a href="https://www.instagram.com/sai_rural_development_trust_?igsh=MWxpM3VvNHpzc3p0Nw=="><FaInstagram /></a>
-            <a href="https://www.linkedin.com/company/sai-rural-development-trust/"><FaLinkedinIn /></a>
+            <a href="https://www.facebook.com/profile.php?id=100087210614157&mibextid=LQQJ4d" target="_blank" rel="noopener noreferrer"><FaFacebookF /></a>
+            <a href="https://www.instagram.com/sai_rural_development_trust_?igsh=MWxpM3VvNHpzc3p0Nw==" target="_blank" rel="noopener noreferrer"><FaInstagram /></a>
+            <a href="https://www.linkedin.com/company/sai-rural-development-trust/" target="_blank" rel="noopener noreferrer"><FaLinkedinIn /></a>
           </div>
         </div>
       </div>
@@ -46,7 +43,7 @@ const Footer = () => {
       {/* Bottom Bar */}
       <div className="footer-bottom">
         <p>© {new Date().getFullYear()} SRDT Foundation | All rights reserved.</p>
-        <p>Developed by <span className="highlight">Alphaseam pvt.ltd</span></p>
+        <p>Developed by <span className="highlight">Alphaseam Pvt. Ltd</span></p>
       </div>
     </footer>
   );

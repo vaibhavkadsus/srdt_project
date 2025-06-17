@@ -1,19 +1,36 @@
 .donate-background {
+  position: relative;
   min-height: 100vh;
   width: 100%;
-  background-image: url('../assets/Background images/image.png');
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 60px 15px;
   box-sizing: border-box;
+  overflow: hidden;
+  z-index: 0;
 }
 
+/* ::before pseudo-element for background blur */
+.donate-background::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-image: url('../assets/Background images/image2.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  filter: blur(8px);
+  z-index: -1;
+}
+
+/* Foreground content */
 .donate-container {
+  position: relative;
   max-width: 600px;
   width: 100%;
   background: rgba(255, 255, 255, 0.95);
@@ -24,6 +41,7 @@
   text-align: left;
   backdrop-filter: blur(6px);
   transition: transform 0.3s ease;
+  z-index: 1;
 }
 
 .donate-container:hover {
