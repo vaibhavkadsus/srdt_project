@@ -1,44 +1,79 @@
+.donate-background {
+  min-height: 100vh;
+  width: 100%;
+  background-image: url('../assets/Background images/image.png');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 15px;
+  box-sizing: border-box;
+}
+
 .donate-container {
   max-width: 600px;
-  margin: 60px auto;
-  padding: 25px;
-  background-color: #f9f9f9;
-  border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-  font-family: Arial, sans-serif;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+  font-family: "Segoe UI", sans-serif;
   text-align: left;
+  backdrop-filter: blur(6px);
+  transition: transform 0.3s ease;
+}
+
+.donate-container:hover {
+  transform: translateY(-5px);
 }
 
 .donate-container h2 {
   margin-bottom: 20px;
-  color: #333;
-  font-size: 24px;
+  color: #2c3e50;
+  font-size: 26px;
   text-align: center;
 }
 
 .donate-container ul {
   list-style-type: none;
   padding: 0;
-  margin: 0 0 20px;
+  margin-bottom: 20px;
 }
 
 .donate-container li {
-  font-size: 16px;
-  margin: 10px 0;
-  color: #444;
+  font-size: 17px;
+  margin: 12px 0;
+  color: #34495e;
 }
 
 .donate-help {
   font-size: 16px;
-  color: #333;
+  color: #2d3436;
   line-height: 1.6;
+  text-align: center;
 }
 
 .inline-link {
-  color: #007bff;
+  color: #2980b9;
   text-decoration: none;
+  font-weight: bold;
 }
 
 .inline-link:hover {
   text-decoration: underline;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .donate-container {
+    padding: 20px;
+    font-size: 15px;
+  }
+
+  .donate-container h2 {
+    font-size: 22px;
+  }
 }
