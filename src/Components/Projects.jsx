@@ -162,23 +162,23 @@ Health camp, PPE kit distribution, and safety awareness programme for 700 farmer
     images: [photo61, photo62, photo63, photo64, photo65, photo67, photo68, photo69],
   },
   {
-  title: "Mulch Collection and Recycling",
-  founder: "East West Seeds India Pvt. Ltd",
-  implementing: "SRDT",
-  period: "6 Months (2024-25)",
-  description:
-    "Location: Devulgaon Raja, Lonar, Maharashtra Collection of 30MT of Mulch Waste from the Project Location and Recycling of the collected Mulch Waste through processing unit.",
-  images: [mulchImg1, mulchImg2, mulchImg3, mulchImg4]
-}
+    title: "Mulch Collection and Recycling",
+    founder: "East West Seeds India Pvt. Ltd",
+    implementing: "SRDT",
+    period: "6 Months (2024-25)",
+    description:
+      "Location: Devulgaon Raja, Lonar, Maharashtra Collection of 30MT of Mulch Waste from the Project Location and Recycling of the collected Mulch Waste through processing unit.",
+    images: [mulchImg1, mulchImg2, mulchImg3, mulchImg4]
+  }
 ];
 
 const ongoingProjects = [
- {
-  title: "S A V E 4.0 (on Soil Health and Mulch Collection and Recycling)",
-  founder: "Syngenta",
-  implementing: "SRDT",
-  period: "1 year (2024–25)",
-  description: `Location: Devulgaon Raja, Lonar, Washim, Nanded (Maharashtra), Rajasthan and Punjab
+  {
+    title: "S A V E 4.0 (on Soil Health and Mulch Collection and Recycling)",
+    founder: "Syngenta",
+    implementing: "SRDT",
+    period: "1 year (2024–25)",
+    description: `Location: Devulgaon Raja, Lonar, Washim, Nanded (Maharashtra), Rajasthan and Punjab
 
 Soil Health:
 • Soil Testing of 350 growers.
@@ -192,24 +192,24 @@ Mulch Waste Collection and Recycling:
 Vermicomposting Units (Agri-enterprising model):
 • Promote crop waste management via vermicomposting.
 • Engage rural youth to adopt sustainable waste solutions.`,
-  images: [],
-},
-{
-  title: "Mulch Collection and Recycling",
-  founder: "East West Seeds India Pvt. Ltd",
-  implementing: "SRDT",
-  period: "6 months",
-  description: `Location: Devulgaon Raja, Lonar, Maharashtra
+    images: [],
+  },
+  {
+    title: "Mulch Collection and Recycling",
+    founder: "East West Seeds India Pvt. Ltd",
+    implementing: "SRDT",
+    period: "6 months",
+    description: `Location: Devulgaon Raja, Lonar, Maharashtra
 
 Mulch Waste Collection and Recycling:
 • Collection of 30MT of mulch waste from project location.
 • Recycling of collected mulch waste through processing unit.`,
-  images: [],
-},
+    images: [],
+  },
 
 
 
-  ];
+];
 
 const Projects = () => {
   const settings = {
@@ -302,7 +302,7 @@ const Projects = () => {
               </div>
             </div>
           ))}
-          </div>
+        </div>
       </div>
     </div>
   );

@@ -19,6 +19,8 @@ import waste from "../assets/interest/Waste Management.jpg";
 import water from "../assets/interest/Water Development.jpg";
 import women from "../assets/interest/Women Empowerment.jpg";
 
+import interestBanner from "../assets/Home/image.png"; // ✅ Banner Image
+
 import "./Home.css";
 
 const images = [photo1, photo2, photo3, photo4, photo5, photo6];
@@ -72,6 +74,11 @@ const Home = () => {
           ))}
         </div>
       </section>
+
+      {/* ✅ Image AFTER Interest Section */}
+      <div className="interest-banner">
+        <img src={interestBanner} alt="Interest Related Banner" />
+      </div>
     </div>
   );
 };

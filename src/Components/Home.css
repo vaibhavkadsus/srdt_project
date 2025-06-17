@@ -15,7 +15,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center center; 
+  object-position: center center;
   opacity: 0;
   transition: opacity 1s ease-in-out;
 }
@@ -24,7 +24,7 @@
   opacity: 1;
 }
 
-
+/* Interest Section */
 .interest-section {
   padding: 40px 20px;
   background-color: #f4f7f9;
@@ -62,7 +62,7 @@
   width: 100%;
   height: 100px;
   object-fit: cover;
-  object-position: center center; /* avoids top cropping */
+  object-position: center center;
   border-radius: 8px;
 }
 
@@ -70,6 +70,19 @@
   margin-top: 10px;
   font-size: 1rem;
   color: #333;
+}
+
+/* ✅ Banner Style */
+.interest-banner {
+  margin: 40px auto;
+  text-align: center;
+}
+
+.interest-banner img {
+  max-width: 90%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 /* Responsive Design */
@@ -88,6 +101,10 @@
 
   .interest-section h2 {
     font-size: 1.5rem;
+  }
+
+  .interest-banner img {
+    max-width: 95%;
   }
 }
 
