@@ -1,11 +1,17 @@
 import React from "react";
 import './About.css'; 
-import bgImage from "../assets/Background images/image.png"; // Make sure this path is correct
-import growerImg from "../assets/About/Grower Awareness Session 4.jpg"; // Use correct path for image
+import { motion } from "framer-motion";
+import bgImage from "../assets/Background images/image1.png"; 
+import growerImg from "../assets/About/Grower Awareness Session 4.jpg"; 
+
+const fadeUp = {
+  hidden: { opacity: 0, y: 30 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.8 } }
+};
 
 const About = () => {
   return (
-    <div
+    <motion.div
       className="about-container"
       style={{
         backgroundImage: `url(${bgImage})`,
@@ -14,45 +20,53 @@ const About = () => {
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
       }}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
     >
-      <div className="about-header">
+      <motion.div className="about-header" variants={fadeUp}>
         <h1>About Us</h1>
         <p>Empowering rural communities through sustainable development</p>
-      </div>
+      </motion.div>
 
-      <div className="about-section">
-        <img
-          src={growerImg}
-          alt="Sai Rural Development Trust"
+      <motion.div className="about-section" variants={fadeUp}>
+        <motion.img 
+          src={growerImg} 
+          alt="Sai Rural Development Trust" 
+          whileHover={{ scale: 1.03 }} 
+          transition={{ duration: 0.3 }} 
         />
-        <div className="about-text">
-          <h2>Who We Are</h2>
-          <p>
-            Sai Rural Development Trust (SRDT), registered under the Mumbai Public Trust
-            Act, works at the grassroots level to uplift farmers, women, SHGs, and rural
-            communities through social programs and sustainable practices.
-          </p>
-        </div>
-      </div>
+      </motion.div>
+
+      <motion.div className="who-we-are-block" variants={fadeUp}>
+        <h2>Who We Are</h2>
+        <p>
+          Sai Rural Development Trust (SRDT), established under the Mumbai Public Trust Act, 1950, has been working tirelessly in the sector for several years.
+          We dedicate our efforts to improving the lives of Farmers, Farm Workers, Communities and Women SHG’s through various development projects.
+        </p>
+        <p>
+          We bring a wealth of experience in Project Planning & Execution across various sectors, Capacity Building, Training, and comprehensive Baseline Study/Needs Assessment.
+          Our team is dedicated to ensuring the success of our initiatives and making a tangible difference in the lives of those we serve.
+        </p>
+      </motion.div>
 
       <div className="about-cards">
-        <div className="card">
-          <h3>Our Vision</h3>
-          <p>
-            To empower underprivileged individuals and communities to live with dignity
-            and actively contribute to society.
-          </p>
-        </div>
-        <div className="card">
-          <h3>Our Mission</h3>
-          <p>
-            To drive social change, inclusion, and community integration through
-            education, healthcare, and skill development.
-          </p>
-        </div>
+        {[{
+            title: "Our Vision",
+            desc: "To provide resources and opportunities to underprivileged individuals, groups, and communities, empowering them to live with dignity and become active, contributing members of our society."
+          },
+          {
+            title: "Our Mission",
+            desc: "We strive to be the foundation for social change and inclusion, fostering the social development and integration of underprivileged individuals, groups, and communities."
+        }].map((card, idx) => (
+          <motion.div className="card" key={idx} variants={fadeUp}>
+            <h3>{card.title}</h3>
+            <p>{card.desc}</p>
+          </motion.div>
+        ))}
       </div>
 
-      <div className="about-values">
+      <motion.div className="about-values" variants={fadeUp}>
         <h2>Our Core Values</h2>
         <div className="value-tags">
           {[
@@ -64,26 +78,20 @@ const About = () => {
             "Participation",
             "Creativity",
           ].map((val) => (
-            <span key={val}>{val}</span>
+            <motion.span key={val} whileHover={{ scale: 1.1 }}>{val}</motion.span>
           ))}
         </div>
-      </div>
+      </motion.div>
 
-      <div className="chairman-message">
+      <motion.div className="chairman-message" variants={fadeUp}>
         <h2>Message from the Chairman</h2>
         <p>
-          “It’s our duty and responsibility to give back to society. With our team’s
-          dedication and support, we are building a brighter future for all.”
+          I strongly believe that it’s our duty and responsibility to give back to the society in which we live. Our team's unwavering dedication and support have enabled us to make a positive impact on countless lives.
+          Together, we are building a brighter future for all.
         </p>
-        <p><strong>– Mr. Ram Santram Mise</strong></p>
-      </div>
-
-      <div className="about-contact">
-        <p>📍 Address: Masnerwadi, Gangakhed, Parbhani – 431514, Maharashtra</p>
-        <p>📧 Email: sairuraldevelopmenttrust@gmail.com</p>
-        <p>📞 Phone: +91 99202 41110</p>
-      </div>
-    </div>
+        <p><strong>– Mr. Ram Santram Mise, Chairman, Sai Rural Development Trust</strong></p>
+      </motion.div>
+    </motion.div>
   );
 };
 
