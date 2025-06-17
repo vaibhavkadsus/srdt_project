@@ -30,7 +30,6 @@ import img26 from "../assets/Gallary/Grower Awareness Session 4.jpg";
 import img27 from "../assets/Gallary/Grower Awareness Session 5.jpg";
 import img28 from "../assets/Gallary/Grower Awareness Session.JPG";
 import img29 from "../assets/Gallary/Health Camp (Health & Safety Awareness Session).JPG";
-import img30 from "../assets/Gallary/Health Camp (PPE Kit Distribution.JPG";
 import img31 from "../assets/Gallary/Health Camp 1.JPG";
 import img32 from "../assets/Gallary/IMG_1627.jpg";
 import img33 from "../assets/Gallary/IMG_1629.jpg";
