@@ -1,9 +1,20 @@
 import React from "react";
 import './About.css'; 
+import bgImage from "../assets/Background images/image.png"; // Make sure this path is correct
+import growerImg from "../assets/About/Grower Awareness Session 4.jpg"; // Use correct path for image
 
 const About = () => {
   return (
-    <div className="about-container">
+    <div
+      className="about-container"
+      style={{
+        backgroundImage: `url(${bgImage})`,
+        backgroundSize: "cover",
+        backgroundAttachment: "fixed",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+      }}
+    >
       <div className="about-header">
         <h1>About Us</h1>
         <p>Empowering rural communities through sustainable development</p>
@@ -11,7 +22,7 @@ const About = () => {
 
       <div className="about-section">
         <img
-          src="src\assets\About\Grower Awareness Session 4.jpg"
+          src={growerImg}
           alt="Sai Rural Development Trust"
         />
         <div className="about-text">
@@ -44,9 +55,16 @@ const About = () => {
       <div className="about-values">
         <h2>Our Core Values</h2>
         <div className="value-tags">
-          {["Responsibility", "Accountability", "Transparency", "Innovation", "Equality", "Participation", "Creativity"]
-            .map((val) => (
-              <span key={val}>{val}</span>
+          {[
+            "Responsibility",
+            "Accountability",
+            "Transparency",
+            "Innovation",
+            "Equality",
+            "Participation",
+            "Creativity",
+          ].map((val) => (
+            <span key={val}>{val}</span>
           ))}
         </div>
       </div>
